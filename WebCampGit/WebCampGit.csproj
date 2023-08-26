@@ -104,7 +104,6 @@
     <Content Include="docs\MySqlTransaction.xml" />
     <Content Include="FailFast.aspx" />
     <Content Include="externalref\SharedComponents.dll" />
-    <Content Include="externalref\SharedComponents.pdb" />
     <Content Include="FusionLog.aspx" />
     <Content Include="Global.asax" />
     <Content Include="headers.aspx" />
