@@ -91,6 +91,7 @@
     <Content Include="correctconnections.aspx" />
     <Content Include="CrashVars.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DelayPage.aspx" />
     <Content Include="docs\MySqlCommand.xml" />
     <Content Include="docs\MySqlCommandBuilder.xml" />
     <Content Include="docs\MySqlConnection.xml" />
@@ -209,6 +210,12 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DelayPage.aspx.cs">
+      <DependentUpon>DelayPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DelayPage.aspx.designer.cs">
+      <DependentUpon>DelayPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="FailFast.aspx.cs">
       <DependentUpon>FailFast.aspx</DependentUpon>

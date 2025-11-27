@@ -18,23 +18,24 @@ namespace demomvp
 
         public async Task LoadSomeData()
         {
-            int delay = 3;
-
-            if (Request.QueryString["t"] !=null)
-            {
-               Int32.TryParse(Request.QueryString["t"].ToString(), out delay);
-            }
+            // Generate random delay between 20-45 seconds
+            Random rand = new Random();
+            int delay = rand.Next(20, 46);
 
             HttpClient Client = new HttpClient();
 
             Client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36");
             Client.DefaultRequestHeaders.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8");
 
-            var clientcontacts = Client.GetStringAsync("https://httpbin.org/delay/" + delay);
+            // Construct URL to our new DelayPage with the random delay
+            string baseUrl = Request.Url.GetLeftPart(UriPartial.Authority);
+            string delayPageUrl = $"{baseUrl}/DelayPage.aspx?t={delay}";
+            
+            var clientcontacts = Client.GetStringAsync(delayPageUrl);
             
             await Task.WhenAll(clientcontacts);
 
-            message.Text = clientcontacts.Result;
+            message.Text = $"Called DelayPage with {delay} seconds delay. Full URL: {delayPageUrl}";
         }
     }
 }
