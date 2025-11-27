@@ -121,6 +121,7 @@
     <Content Include="PrintConnectionSummary.aspx" />
     <Content Include="ProcessCrash.aspx" />
     <Content Include="SlowAsync.aspx" />
+    <Content Include="SlowSync.aspx" />
     <Content Include="StackOverflowManagedException.aspx" />
     <Content Include="StackOverflowPage.aspx" />
     <Content Include="TestDatabaseconnection.aspx" />
@@ -338,6 +339,12 @@
     </Compile>
     <Compile Include="SlowAsync.aspx.designer.cs">
       <DependentUpon>SlowAsync.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SlowSync.aspx.cs">
+      <DependentUpon>SlowSync.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SlowSync.aspx.designer.cs">
+      <DependentUpon>SlowSync.aspx</DependentUpon>
     </Compile>
     <Compile Include="SlowPage.aspx.cs">
       <DependentUpon>SlowPage.aspx</DependentUpon>
